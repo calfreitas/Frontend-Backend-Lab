@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+}
+
+.sq1red {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+.sq2blue {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+.sq3green {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}
+
+.sq4yellow {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
