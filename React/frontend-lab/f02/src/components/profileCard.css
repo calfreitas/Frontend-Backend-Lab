@@ -1,0 +1,40 @@
+.containerBox { 
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    border: solid;
+    /* border-radius: 3%; */
+    /* border-width: 10px; */
+    border-color: black;
+    /* border-inline-width: 10px; */
+    /* background-color: black; */
+}
+
+.profileDataBox {
+    /* display: flex; */
+    /* align-items: start; */
+    width: 100%;
+    height: 100%;
+    /* border-radius: 5%; */
+    /* flex-direction: row; */
+
+    /* background-color: white; */
+}
+
+.profileDataField {
+    /* display: flex; */
+    /* align-items: start; */
+    width: 100%;
+    height: 20%;
+
+    border: solid;
+    background-color: aqua;
+    /* border-radius: 5%; */
+    /* flex-direction: row; */
+
+    /* background-color: white; */
+}
