@@ -38,7 +38,7 @@
       }
     </style>
   </head>
-  <body class="text-text font-sans">
+  <body class="bg-linear min-h-screen text-text font-sans">
     <div id="root"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -144,7 +144,7 @@
                     pt-14 px-8 pb-8`}
           >
             <CalculatorDisplay operation={"1 + 1"} result={"2"} />
-                
+
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
                 <Button className="w-16 h-16">CE</Button>
@@ -157,8 +157,8 @@
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
                 <Button className="w-16 h-16">7</Button>
-                <Button className="flex-1 h-16">8</Button>
-                <Button className="flex-1 h-16">9</Button>
+                <Button className="w-16 h-16">8</Button>
+                <Button className="w-16 h-16">9</Button>
                 <Button className="w-16 h-16" variant="primary">
                   *
                 </Button>
@@ -167,8 +167,8 @@
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
                 <Button className="w-16 h-16">4</Button>
-                <Button className="flex-1 h-16">5</Button>
-                <Button className="flex-1 h-16">6</Button>
+                <Button className="w-16 h-16">5</Button>
+                <Button className="w-16 h-16">6</Button>
                 <Button className="w-16 h-16" variant="primary">
                   -
                 </Button>
@@ -177,8 +177,8 @@
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
                 <Button className="w-16 h-16">1</Button>
-                <Button className="flex-1 h-16">2</Button>
-                <Button className="flex-1 h-16">3</Button>
+                <Button className="w-16 h-16">2</Button>
+                <Button className="w-16 h-16">3</Button>
                 <Button className="w-16 h-16" variant="primary">
                   +
                 </Button>
@@ -197,10 +197,29 @@
         );
       }
 
+      function OperationHistory() {
+        return (
+          <Card className="py-10 px-8 w-full">
+            <Text as="h1" variant="heading" className="mb-4">
+              Histórico de Operações
+            </Text>
+            <ul className="flex flex-col gap-3">
+              <Text as="li">1 + 1 = 2</Text>
+              <Text as="li">2 + 3 + 1 = 6</Text>
+              <Text as="li">2+ 3 = 5</Text>
+            </ul>
+          </Card>
+        );
+      }
+
       function App() {
         return (
-          <main className="py-28 px-4">
+          <main 
+          className={
+            `flex flex-col sm:flex-row py-28 px-4
+            items-center sm:items-stretch gap-2 sm:px-10`}>
             <Calculator />
+            <OperationHistory />
           </main>
         );
       }
