@@ -127,22 +127,22 @@
           { input: "*", variant: "primary" },
         ],
         [
-          { input: "4" },
-          { input: "5" },
+          { input: "4" }, 
+          { input: "5" }, 
           { input: "6" },
-          { input: "-", variant: "primary" },
+          { input: "-", variant: "primary" }
         ],
         [
-          { input: "1" },
-          { input: "2" },
-          { input: "3" },
-          { input: "+", variant: "primary" },
+          { input: "1" }, 
+          { input: "2" }, 
+          { input: "3" }, 
+          { input: "+", variant: "primary" }, 
         ],
         [
-          { input: "0", className: "flex-1 h-16" },
-          { input: "," },
-          { input: "=", className: "w-16 h-16 bg-[#7F45E2]" },
-        ],
+          { input: "0", className: "flex-1 h-16" }, 
+          { input: "," }, 
+          { input: "=", className: "w-16 h-16 bg-[#7F45E2]" }, 
+        ]
       ];
 
       function CalculatorDisplay({ operation, result }) {
@@ -169,11 +169,6 @@
       }
 
       function Calculator() {
-
-        function handleInputClick(input){
-          console.log(input)
-        };
-
         return (
           <Card
             className={`flex flex-col gap-[1.625rem] w-[22.25rem] 
@@ -182,20 +177,9 @@
             <CalculatorDisplay operation={"1 + 1"} result={"2"} />
 
             <div className="flex flex-col gap-3">
-              {buttons.map((row, index) => (
-                <div key={`row-${index}`} className="flex gap-3">
-                  {row.map((button) => (
-                    <Button
-                      key={button.input}
-                      className={button.className || "w-16 h-16"}
-                      variant={button.variant}
-                      onClick={() => handleInputClick(button.input)}
-                    >
-                      {button.input}
-                    </Button>
-                  ))}
-                </div>
-              ))}
+              <div className="flex gap-3">
+                <Button className="w-16 h-16">CE</Button>
+              </div>
             </div>
           </Card>
         );
